@@ -1,0 +1,12 @@
+
+# macOS и IntelliJ IDEA
+.DS_Store
+.idea/
+*.iml
+
+# Сборка и отчёты
+.gradle/
+build/
+target/
+allure-results/
+allure-report/
