@@ -100,7 +100,7 @@ public class PasswordPolicy {
         if (password.length() < MIN_LENGTH) {
             found.add(Violation.TOO_SHORT);
         }
-        if (password.length() > MAX_LENGTH - 1) {
+        if (password.length() > MAX_LENGTH) {
             found.add(Violation.TOO_LONG);
         }
 
@@ -146,7 +146,7 @@ public class PasswordPolicy {
             found.add(Violation.CONTAINS_LOGIN);
         }
 
-        if (BLACKLIST.contains(password)) {
+        if (BLACKLIST.contains(password.toLowerCase())) {
             found.add(Violation.BLACKLISTED);
         }
 
@@ -159,7 +159,7 @@ public class PasswordPolicy {
         for (int i = 1; i < s.length(); i++) {
             if (s.charAt(i) == s.charAt(i - 1)) {
                 run++;
-                if (run > 3) {
+                if (run >= 3) {
                     return true;
                 }
             } else {
