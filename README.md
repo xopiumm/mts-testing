@@ -23,3 +23,5 @@ docker run --rm api-test
 любую ветку, доступен также ручной запуск. Job получает текущий checkout,
 собирает image из `lab-2` и запускает этот же image командой
 `docker run --rm api-test:ci`.
+
+[Ссылка на успешный запуск pipeline](https://github.com/xopiumm/mts-testing/actions/runs/39207600519/job/117913721726?pr=5)
